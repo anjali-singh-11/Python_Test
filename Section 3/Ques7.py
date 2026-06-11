@@ -1,3 +1,5 @@
+import json
+
 Employees = [
     "id: 101, name: Aman\n",
     "id: 102, name: Jai\n",
@@ -23,7 +25,7 @@ print("Employees appended successfully.\n")
 print("Reading updated file")
 with open("employees.txt", "r") as file:
     updated_content = file.read()
-    print(updated_content)import json
+    print(updated_content)
 
 students = [
     {"name": "Rahul", "age": 20, "city": "Delhi", "marks": 85},
