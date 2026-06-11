@@ -23,14 +23,26 @@ print("Employees appended successfully.\n")
 print("Reading updated file")
 with open("employees.txt", "r") as file:
     updated_content = file.read()
-    print(updated_content)
+    print(updated_content)import json
 
-print("Deleting file and verifying")
-if os.path.exists("employees.txt"):
-    os.remove("employees.txt")
-    print("File deleted.")
+students = [
+    {"name": "Rahul", "age": 20, "city": "Delhi", "marks": 85},
+    {"name": "Priya", "age": 21, "city": "Mumbai", "marks": 90},
+    {"name": "Amit", "age": 22, "city": "Pune", "marks": 70}
+]
 
-if os.path.exists("employees.txt"):
-    print("Verification Failed: File still exists.")
-else:
-    print("Verification Success: File no longer exists.")
+with open("students.json", "w") as file:
+    json.dump(students, file, indent=4)
+
+try:
+    with open("students.json", "r") as file:
+        data = json.load(file)
+
+    print("Students with marks > 75")
+
+    for student in data:
+        if student["marks"] > 75:
+            print(student)
+
+except FileNotFoundError:
+    print("JSON File Not Found")
