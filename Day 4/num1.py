@@ -45,9 +45,25 @@ import numpy as np
 
 
 #Ques10
-arr = np.array([45, 90, 23, 67, 88])
-print("Highest:", np.max(arr))
-print("Lowest:", np.min(arr))
+# arr = np.array([45, 90, 23, 67, 88])
+# print("Highest:", np.max(arr))
+# print("Lowest:", np.min(arr))
 
 
 #Ques11
+print("Array of zeroes:", np.zeros(10))
+
+#Ques12
+print("Array of ones:", np.ones(8))
+
+#Ques13
+print("Range:", np.arange(1, 11))
+
+#Ques14
+print("Even Numbers:", np.arange(2, 21, 2))
+
+#Ques15
+matrix = np.array([
+    [1, 2],
+    [3, 4]])
+print(matrix)
