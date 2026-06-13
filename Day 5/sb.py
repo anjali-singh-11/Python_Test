@@ -13,3 +13,4 @@ plt.show()
 
 sns.lineplot(x="player", y="Goals", data=df)
 plt.show()
+
